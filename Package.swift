@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "CountryPicker",
     platforms: [
-        .iOS("15.0")
+        .iOS("11.0")
     ],
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
@@ -24,10 +24,16 @@ let package = Package(
         .target(
             name: "CountryPicker",
             dependencies: [],
-            path: "CountryPicker/Sources",
+            path: "CountryPicker/CountryPicker",
             resources: [
                 .copy("CountryPickerController.bundle"),
+                .process("tickMark.png")
             ]
         ),
+            
+        .testTarget(
+            name: "CountryPicker/CountryPicker",
+            dependencies: ["CountryPicker"],
+            path: "CountryPicker/CountryPickerTests"),
     ]
 )
