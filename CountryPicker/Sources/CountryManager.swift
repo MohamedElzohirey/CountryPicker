@@ -131,9 +131,9 @@ public extension CountryManager {
         let fetchedCountries = try fetchCountries(fromURLPath: url)
         countries.removeAll()
         countries.append(contentsOf: fetchedCountries)
-        let germany = countries.first {$0.countryCode == "49"}
+        let germany = countries.first {$0.countryCode == "DE"}
         if let germany {
-            countries.removeAll{ $0.countryCode == "49"}
+            countries.removeAll{ $0.countryCode == "DE"}
             countries.insert(germany, at: 0)
         }
     }
