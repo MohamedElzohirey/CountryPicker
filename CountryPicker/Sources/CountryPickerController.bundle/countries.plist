@@ -2,6 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
+	<string>DE</string>
 	<string>AD</string>
 	<string>AE</string>
 	<string>AF</string>
@@ -58,7 +59,6 @@
 	<string>CX</string>
 	<string>CY</string>
 	<string>CZ</string>
-	<string>DE</string>
 	<string>DJ</string>
 	<string>DK</string>
 	<string>DM</string>
