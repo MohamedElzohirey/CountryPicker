@@ -131,6 +131,11 @@ public extension CountryManager {
         let fetchedCountries = try fetchCountries(fromURLPath: url)
         countries.removeAll()
         countries.append(contentsOf: fetchedCountries)
+        let germany = countries.first {$0.countryCode == "49"}
+        if let germany {
+            countries.removeAll{ $0.countryCode == "49"}
+            countries.insert(germany, at: 0)
+        }
     }
     
     func allCountries(_ favoriteCountriesLocaleIdentifiers: [String]) -> [Country] {
